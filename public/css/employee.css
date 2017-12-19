@@ -1,0 +1,24 @@
+.header {
+    margin-bottom: 30px;
+}
+.header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+p.bg-info {
+  padding: 1em;
+}
+
+p.bg-warning {
+  padding: 1em;
+}
+
+p.bg-danger {
+  padding: 1em;
+}
