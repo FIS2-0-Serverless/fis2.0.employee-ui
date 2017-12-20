@@ -15,6 +15,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "aws.clean": "aws s3 rb --region eu-central-1 --force s3://dschmitz.fis20.employee.ui",
+    "aws.setup.bucket": "aws s3 mb s3://dschmitz.fis20.employee.ui && aws s3api put-bucket-tagging --bucket dschmitz.fis20.employee.ui --tagging 'TagSet=[{Key=CostCenter,Value=Tecco}]' --region eu-central-1",
+    "aws.setup.site": "aws s3 website s3://dschmitz.fis20.employee.ui/ --index-document index.html",
+    "aws.upload": "npm run build && aws s3 sync build/ s3://dschmitz.fis20.employee.ui --acl public-read --region eu-central-1",
+    "aws.open": "open http://dschmitz.fis20.employee.ui.s3-website.eu-central-1.amazonaws.com/"
   }
 }
