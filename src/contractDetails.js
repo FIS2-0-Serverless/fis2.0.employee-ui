@@ -1,23 +1,19 @@
 import React, { Component } from 'react'
+import FormField from './formField'
 
-class ContractDetails extends Component {
-  render() {
-    return (
+const ContractDetails = ({joinDate, exitDate = "", contractDate, noticePeriod = ""}) =>
       <div className="panel panel-default">
         <div className="panel-heading">
           <h3 className="panel-title">Contract Details</h3>
         </div>
         <div className="panel-body">
-        <ul>
-          <li>loremasdadssaadsadsads</li>
-          <li>loremasdadssaadsadsads</li>
-          <li>loremasdadssaadsadsads</li>
-          <li>loremasdadssaadsadsads</li>
-        </ul>
+          <form className="form-horizontal">
+            <FormField title="Join date" value={joinDate}/>
+            <FormField title="Exit date" value={exitDate}/>
+            <FormField title="Contract date" value={contractDate}/>
+            <FormField title="Notice period" value={noticePeriod}/>
+          </form>
         </div>
       </div>
-    )
-  }
-}
 
 export default ContractDetails;
