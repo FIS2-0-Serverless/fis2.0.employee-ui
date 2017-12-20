@@ -8,7 +8,7 @@ class PersonalDetails extends Component {
     const { name, location, dob, nat } = this.props.employee
 
     return (
-      <div className="panel panel-default">
+      <div className="panel panel-default panel-primary">
         <div className="panel-heading">
           <h3 className="panel-title">Personal details</h3>
         </div>

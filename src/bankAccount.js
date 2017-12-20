@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import FormField from './formField'
 
 const BankAccount = ({iban, holderLastname, holderFirstname, bic}) =>
-      <div className="panel panel-default">
+      <div className="panel panel-default panel-primary">
         <div className="panel-heading">
           <h3 className="panel-title">Back Account</h3>
         </div>

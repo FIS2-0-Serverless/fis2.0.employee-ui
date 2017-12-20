@@ -47,8 +47,8 @@ class App extends Component {
 
     return (
       <div className="">
-        <AwsConfig config={AWS.config}/>
         { output }
+        <AwsConfig config={AWS.config}/>
       </div>
     );
   }

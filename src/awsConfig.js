@@ -1,8 +1,7 @@
 import React from 'react';
 
-const AwsConfig = ({ config }) => {
-  console.dir(config)
-  return (<div className="panel panel-default">
+const AwsConfig = ({ config }) =>
+  <div className="panel panel-default panel-info">
     <div className="panel-heading">
       <h3 className="panel-title">AWS Config</h3>
     </div>
@@ -12,6 +11,6 @@ const AwsConfig = ({ config }) => {
         <li><span className="">IdentityPoolId: </span><span>{config.credentials.params.IdentityPoolId}</span></li>
       </ul>
     </div>
-  </div>)}
+  </div>
 
 export default AwsConfig;

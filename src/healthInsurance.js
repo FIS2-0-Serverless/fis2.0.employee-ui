@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import FormField from './formField'
 
 const HealthInsurance = ({insuranceType, insuranceName, socialSecurityNumber, lastMandatedHealthInsurance, parenthood, disabled}) =>
-      <div className="panel panel-default">
+      <div className="panel panel-default panel-primary">
         <div className="panel-heading">
           <h3 className="panel-title">Health Insurance</h3>
         </div>

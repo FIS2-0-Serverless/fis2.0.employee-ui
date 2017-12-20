@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-const PositionRow = ({name, nameInContract, salaryLevel, validFrom, lastUpdate, updatedBy, key}) =>
-  <tr key={key}>
+const PositionRow = ({name, nameInContract, salaryLevel, validFrom, lastUpdate, updatedBy}) =>
+  <tr>
     <td>{name}</td>
     <td>{nameInContract}</td>
     <td>{salaryLevel}</td>
@@ -11,7 +11,7 @@ const PositionRow = ({name, nameInContract, salaryLevel, validFrom, lastUpdate, 
   </tr>
 
 const Ranking = ({rankings = []}) =>
-     <div className="panel panel-default">
+     <div className="panel panel-default panel-primary">
         <div className="panel-heading">
           <h3 className="panel-title">Ranking</h3>
         </div>

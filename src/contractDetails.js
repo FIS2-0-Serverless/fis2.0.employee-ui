@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import FormField from './formField'
 
 const ContractDetails = ({joinDate, exitDate = "", contractDate, noticePeriod = ""}) =>
-      <div className="panel panel-default">
+      <div className="panel panel-default panel-primary">
         <div className="panel-heading">
           <h3 className="panel-title">Contract Details</h3>
         </div>
