@@ -17,7 +17,12 @@ class Employees extends Component {
     this.setState({ loading: true })
 
     fetch('https://e3ixwum5ff.execute-api.eu-central-1.amazonaws.com/Stage/employee')
-      .then(response => response.json())
+      .then(response => {
+        if (response.status !== 200 && response.status !== 404) {
+          throw new Error("Bad response from server: " + response.status);
+        }
+        return response.status === 200 ? response.json() : null
+      })
       .then(json => json.users)
       .then(employees => employees.sort( (a,b) => a.name.last > b.name.last))
       // .then(e => { throw new Error("FOO") })
