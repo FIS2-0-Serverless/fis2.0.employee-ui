@@ -39,18 +39,21 @@ class Contract extends Component {
   componentDidMount() {
     this.setState({ contractLoading: true })
 
-    fetch('https://e3ixwum5ff.execute-api.eu-central-1.amazonaws.com/Stage/employee/' + this.props.employeeId + "/contract")
+    fetch('https://17ndprt19g.execute-api.eu-central-1.amazonaws.com/Stage/employee/' + this.props.employeeId + "/contract")
       .then(response => {
         if (response.status !== 200 && response.status !== 404) {
           throw new Error("Bad response from server: " + response.status);
         }
         return response.status === 200 ? response.json() : null
       })
-      .then(contract => this.setState({
+      .then(contracts => {
+        this.setState({
             contractLoading: false,
             errorMsg: null,
-            contract
-        }))
+            contract: contracts.length > 0 ? contracts[0] : null
+        })
+      }
+      )
       .catch(e => {
          this.setState({ contract: null, contractLoading: false, errorMsg: 'Cannot load contract! ' + (e.message || "Check logs for details") })
       })
