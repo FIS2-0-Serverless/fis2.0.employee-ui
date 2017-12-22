@@ -1,5 +1,20 @@
 import fetch from 'isomorphic-fetch';
 
+
+const dismissContract = (contractId) => {
+  if (process.env.REACT_APP_SERVICE === 'mock') {
+    return Promise.resolve({})
+  }
+
+  return fetch('https://17ndprt19g.execute-api.eu-central-1.amazonaws.com/Stage/contract/' + contractId + '/dismissal', { method: 'POST', body: '' })
+          .then(response => {
+            console.log(response)
+          })
+          .catch(e => {
+            console.warn(e)
+          })
+}
+
 const fetchContractForEmployee = (employee) => {
   if (process.env.REACT_APP_SERVICE === 'mock') {
     return Promise.resolve({
@@ -54,5 +69,6 @@ const fetchEmployees = () => {
 
 export default {
   fetchEmployees,
-  fetchContractForEmployee
+  fetchContractForEmployee,
+  dismissContract
 }

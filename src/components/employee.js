@@ -10,7 +10,7 @@ import HealthInsurance from './healthInsurance'
 const Employee = ({ onClose, employee, contract }) => {
   const { name, id, healthInsurance, bankAccount, location, phone } = employee
 
-  const contractOutput = contract ? <Contract {...contract}/> : <div>No contract</div>
+  const contractOutput = contract ? <Contract {...contract}/> : <div className="panel-group"><p className="bg-warning">No contract found!</p></div>
 
   return (
     <div>
