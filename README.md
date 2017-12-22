@@ -5,6 +5,7 @@ Responsive tables
 Create Employee
 Modify Data
 Login
+Move to redux
 
 
 -----
